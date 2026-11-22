@@ -29,8 +29,7 @@ However, even though we have outside air temperature this isnt what we use to mo
 ```math
 \mathrm{HDD} = \max(T_{\text{base}} - T_{\text{mean}},\ 0), \qquad \mathrm{CDD} = \max(T_{\text{mean}} - T_{\text{base}},\ 0)
 ```
-where $\bar{T}_d$ is the mean of the hourly temperature on day *d* and  
-A base temperature of 15.5 °C is the UK standard which was used for both HDD and CDD.
+where $T_{\text{mean}}$ is the mean of the hourly temperature on day *d* and $T_{\text{base}}$  is the UK standard of 15.5 °C which was used for both HDD and CDD.
 
 
 
