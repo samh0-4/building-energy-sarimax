@@ -16,6 +16,21 @@ We see the same problem appearing within real estate, whether that be homes, fla
 The data for this project comes from the [Building Data Genome Project 2](https://github.com/buds-lab/building-data-genome-project-2) (BDG2), an open dataset of hourly meter readings from over 1,600 non-residential buildings, mostly university campuses, covering the years 2016 and 2017. Hourly weather data is also in the dataset. This dataset was picked in particular as it contains real metered data for a full 24 months along with matching weather data for every building.
 
 ### 2.2 Building selection
+One office building was selected from this dataset: 'Robin_office_Antonia', at the Robin site in central London. It was built in 1955 with a floor area of 6,100 m² and is heated via gas. As the heating is not electric, its electricity use only covers cooling, lighting, equipment and ventilation, so it is expected to increase in relation to rising outside temperatures as opposed to decreasing outside temperatures.
+
+One of the main reasons this building is suitable for this study is that it has a complete hourly electricity record for 2016, with only small meter dropouts in 2017. The data also responds directly to changes in outdoor temperature along with no step changes in consumption between the two years. Finally, its very much relevant to UK commercial energy management due to the fact its a London office building.
+
+### 2.3 Weather and degree days
+
+The hourly outdoor air temperature for this site was averaged in order to give a daily mean temperature. There was about 29 missing temperatures across the two years, which are filled using linear interpolation.
+
+However, even though we have outside air temperature this isnt what we use to model energy usage. Instead, we use heating degree days (HDD) and cooling degree days (CDD). Degree days measure how much heating or cooling a building is likely to need. HDD adds up how far the daily mean temperature falls below a base temperature and CDD how far it rises above one. We represent this mathematically as follows:
+
+```math
+\mathrm{HDD} = \max(T_{\text{base}} - T_{\text{mean}},\ 0), \qquad \mathrm{CDD} = \max(T_{\text{mean}} - T_{\text{base}},\ 0)
+```
+
+A base temperature of 15.5 °C is the UK standard which was used for both HDD and CDD.
 
 
 
