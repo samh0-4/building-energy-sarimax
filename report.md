@@ -12,6 +12,13 @@ We see the same problem appearing within real estate, whether that be homes, fla
 
 ## 2. Data
 
+### 2.1 Source
+The data for this project comes from the [Building Data Genome Project 2](https://github.com/buds-lab/building-data-genome-project-2) (BDG2), an open dataset of hourly meter readings from over 1,600 non-residential buildings, mostly university campuses, covering the years 2016 and 2017. Hourly weather data is also in the dataset. This dataset was picked in particular as it contains real metered data for a full 24 months along with matching weather data for every building.
+
+### 2.2 Building selection
+
+
+
 ## 3. Methods
 
 ### 3.1 Degree-day regression (LINEST)
